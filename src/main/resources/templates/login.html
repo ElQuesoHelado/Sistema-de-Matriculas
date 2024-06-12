@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="|Alumno de CUI: ${cui}|" />
+<p th:text="|Nombre: ${pnombre} ${snombre} ${papellido} ${sapellido}|" />
+</body>
+<form action="/aprobados?cui=${cui}" method="get">
+<!--    <ul>-->
+<!--        <li>-->
+<!--            <label for="cui">Cui:</label>-->
+<!--            <input type="text" id="cui" name="cui"/>-->
+<!--        </li>-->
+<!--        &lt;!&ndash;        <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <label for="mail">Email:</label>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <input type="email" id="mail" name="user_email"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <label for="msg">Message:</label>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <textarea id="msg" name="user_message"></textarea>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </li>&ndash;&gt;-->
+<!--    </ul>-->
+    <div class="button">
+        <button type="submit">Cursos Aprobados</button>
+    </div>
+</form>
+
+
+</html>

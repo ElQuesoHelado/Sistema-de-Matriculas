@@ -13,6 +13,9 @@ public interface AlumnoRepository extends CrudRepository<Alumno,Integer> {
     @Query(nativeQuery = true,value = "SELECT * FROM get_cursos_aprobados(:id) ")
     List<CursoAprobado> get_cursos_aprobados(int id);
 
+    @Query(nativeQuery = true,value = "SELECT * FROM get_cursos_matriculables(:id) ")
+    List<CursoMatriculable> get_cursos_matriculables(int id);
+
     //Con proyeccion, aparentemente es lento
     public static interface CursoAprobado{
         int getCodigo();
@@ -25,4 +28,13 @@ public interface AlumnoRepository extends CrudRepository<Alumno,Integer> {
         String getProf_apellido();
     }
 
+    public static interface CursoMatriculable{
+        int getCodigo();
+        String getNombre();
+        int getCreditos();
+        int getSemestre();
+        int getCodigo_doc();
+        String getDocente_nombre();
+        String getDocente_apellido();
+    }
 }

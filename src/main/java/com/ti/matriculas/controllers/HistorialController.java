@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class AprobadosController {
+public class HistorialController {
     @Autowired
     private AlumnoRepository repository;
 
-    @GetMapping("/aprobados")
-    public String aprobados(@RequestParam(name = "cui") int cui, Model model){
-        List<AlumnoRepository.Curso> aprobados = repository.get_cursos_aprobados(cui);
-        model.addAttribute("aprobados", aprobados);
-        return "aprobados";
+    @GetMapping("/historial")
+    public String historial(@RequestParam(name = "cui") int cui, Model model){
+        List<AlumnoRepository.Curso> historial = repository.get_historial(cui);
+        model.addAttribute("historial", historial);
+        return "historial";
     }
 }

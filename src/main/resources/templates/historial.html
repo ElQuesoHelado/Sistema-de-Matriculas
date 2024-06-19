@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cursos Aprobados</title>
+    <title>Historial de Notas</title>
 </head>
 <body>
 <table>
@@ -20,7 +20,7 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each="curso: ${aprobados}">
+        <tr th:each="curso: ${historial}">
             <td><span th:text="${curso.codigo}"> </span></td>
             <td><span th:text="${curso.nombre}"> </span></td>
             <td><span th:text="${curso.nota1}"> </span></td>

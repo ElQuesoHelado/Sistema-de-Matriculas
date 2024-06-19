@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cursos Aprobados</title>
+    <title>Cursos Reprobados</title>
 </head>
 <body>
 <table>
@@ -20,7 +20,10 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each="curso: ${aprobados}">
+<!--    <div th:if="${not #lists.isEmpty(tblUserList)}">-->
+<!--        &#45;&#45;content&#45;&#45;-->
+<!--    </div>-->
+        <tr th:if="${not #lists.isEmpty(reprobados)}" th:each="curso: ${reprobados}">
             <td><span th:text="${curso.codigo}"> </span></td>
             <td><span th:text="${curso.nombre}"> </span></td>
             <td><span th:text="${curso.nota1}"> </span></td>

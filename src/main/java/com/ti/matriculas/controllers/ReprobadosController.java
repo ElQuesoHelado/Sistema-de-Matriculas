@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class AprobadosController {
+public class ReprobadosController {
     @Autowired
     private AlumnoRepository repository;
 
-    @GetMapping("/aprobados")
-    public String aprobados(@RequestParam(name = "cui") int cui, Model model){
-        List<AlumnoRepository.Curso> aprobados = repository.get_cursos_aprobados(cui);
-        model.addAttribute("aprobados", aprobados);
-        return "aprobados";
+    @GetMapping("/reprobados")
+    public String reprobados(@RequestParam(name = "cui") int cui, Model model){
+        List<AlumnoRepository.Curso> reprobados = repository.get_cursos_reprobados(cui);
+        model.addAttribute("reprobados", reprobados);
+        return "reprobados";
     }
 }

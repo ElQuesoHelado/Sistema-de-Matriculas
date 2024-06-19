@@ -21,6 +21,7 @@ public class LoginController {
         model.addAttribute("snombre",alumno.getSnombre());
         model.addAttribute("papellido",alumno.getPapellido());
         model.addAttribute("sapellido",alumno.getSapellido());
+        model.addAttribute("semestre",repository.get_semestre(cui));
         return "login";
     }
 }

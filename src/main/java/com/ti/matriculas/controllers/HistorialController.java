@@ -6,18 +6,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class HistorialController {
+    private final AlumnoRepository repository;
+
     @Autowired
-    private AlumnoRepository repository;
+    public HistorialController(AlumnoRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/historial")
-    public String historial(@RequestParam(name = "cui") int cui, Model model){
-        List<AlumnoRepository.Curso> historial = repository.get_historial(cui);
-        model.addAttribute("historial", historial);
-        return "historial";
+    public List<AlumnoRepository.Curso> historial(@RequestParam(name = "cui") int cui, Model model) {
+        return repository.get_historial(cui);
     }
 }

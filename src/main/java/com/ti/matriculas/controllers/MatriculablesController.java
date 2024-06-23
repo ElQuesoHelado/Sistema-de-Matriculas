@@ -8,18 +8,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class MatriculablesController {
+    private final AlumnoRepository repository;
+
     @Autowired
-    private AlumnoRepository repository;
+    public MatriculablesController(AlumnoRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/matriculables")
-    public String matriculables(@RequestParam(name = "cui") int cui, Model model){
-        List<AlumnoRepository.CursoMatriculable> matriculables = repository.get_cursos_matriculables(cui);
-        model.addAttribute("matriculables", matriculables);
-        return "matriculables";
+    public List<AlumnoRepository.CursoMatriculable> matriculables(@RequestParam(name = "cui") int cui, Model model) {
+        return repository.get_cursos_matriculables(cui);
     }
 }

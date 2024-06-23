@@ -10,9 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
-    @Autowired
-    private AlumnoRepository repository;
+    private final AlumnoRepository repository;
 
+    @Autowired
+    public LoginController(AlumnoRepository repository) {
+        this.repository = repository;
+    }
+
+    //TODO: Cambio a post??
     @GetMapping("/login")
     public String login(@RequestParam(name = "cui") int cui, Model model){
         Alumno alumno = repository.findById(cui);

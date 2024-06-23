@@ -6,18 +6,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class AprobadosController {
+    private final AlumnoRepository repository;
+
     @Autowired
-    private AlumnoRepository repository;
+    public AprobadosController(AlumnoRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/aprobados")
-    public String aprobados(@RequestParam(name = "cui") int cui, Model model){
-        List<AlumnoRepository.Curso> aprobados = repository.get_cursos_aprobados(cui);
-        model.addAttribute("aprobados", aprobados);
-        return "aprobados";
+    public List<AlumnoRepository.Curso> aprobados(@RequestParam(name = "cui") int cui, Model model){
+        return repository.get_cursos_aprobados(cui);
     }
 }

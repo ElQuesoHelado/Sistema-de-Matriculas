@@ -1,0 +1,29 @@
+.theme-login {
+  --bg-login-foreground: white;
+  --bg-login-background: rgba(23, 0, 78, 0.412);
+  --bg-login-background-light: rgba(83, 77, 255, 0.738);
+  --bg-login-label: rgb(179, 221, 245);
+  --bg-login-input-background: rgba(0, 6, 186, 0.463);
+  --bg-login-input-color: white;
+  --bg-login-input-border: #2b00ff;
+
+  --bg-login-button-background: #0800ff;
+  --bg-login-button-background-light: #2c25f5;
+}
+
+.theme-dashboard {
+  --bg-dashboard-header: red;
+}
+
+.btn-login {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bg-login-button-background);
+  --bs-btn-border-color: none;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bg-login-button-background-light);
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bg-login-button-background-light);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}

@@ -21,14 +21,17 @@ public class LoginController {
     @GetMapping("/login")
     public String login(@RequestParam(name = "cui") int cui, Model model){
         Alumno alumno = repository.findById(cui);
+        if(alumno == null)
+            return String.format("redirect:/?error=No se encontro el CUI %d", cui);
         Double promedio = repository.get_promedio_general(cui);
         model.addAttribute("cui",alumno.getCui());
         model.addAttribute("pnombre",alumno.getPnombre());
-        model.addAttribute("snombre",alumno.getSnombre());
-        model.addAttribute("papellido",alumno.getPapellido());
-        model.addAttribute("sapellido",alumno.getSapellido());
+        // model.addAttribute("snombre",alumno.getSnombre());
+        // model.addAttribute("papellido",alumno.getPapellido());
+        // model.addAttribute("sapellido",alumno.getSapellido());
         model.addAttribute("semestre",repository.get_semestre(cui));
-        model.addAttribute("promedio",promedio);
+        model.addAttribute("promedio", String.format("%.02f", promedio));
+
         return "login";
     }
 }

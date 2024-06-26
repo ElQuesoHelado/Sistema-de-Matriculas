@@ -1,36 +1,48 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Datos</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="css/styles.css"/>
+    <meta charset="UTF-8">
+    <title>Sistema de Matrículas</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="styles/perfil.css">
 </head>
 <body>
-<p th:text="|Alumno de CUI: ${cui}|" />
-<p th:text="|Nombre: ${pnombre} ${snombre} ${papellido} ${sapellido}|" />
-<p th:text="|Semestre: ${semestre}|" />
-<p th:text="|Promedio: ${promedio}|" />
+    <div class="container">
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <ul>
+                <li>
+                    <button onclick="toggleSubmenu('perfilSubmenu')">Mi Perfil</button>
+                    <ul id="perfilSubmenu" class="submenu">
+                        <li><button onclick="verCursosAprobados()">‎  ‎  ‎ Cursos aprobados</button></li>
+                        <li><button onclick="verCursosReprobados()">‎  ‎  ‎ Cursos reprobados</button></li>
+                        <li><button onclick="verPromedios()">‎  ‎  ‎ Promedios</button></li>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick="toggleSubmenu('matriculasSubmenu')">Matrículas online</button>
+                    <ul id="matriculasSubmenu" class="submenu">
+                        <li><button onclick="verMatriculados()">‎  ‎  ‎ Matriculados</button></li>
+                        <li><button onclick="verMatriculables()">‎  ‎  ‎ Matriculables</button></li>
+                    </ul>
+                </li>
+                <li><button onclick="verHistorial()">Historial</button></li>
+            </ul>
+            <button style="text-align: center;" class="logout-button" onclick="cerrarSesion()">- Cerrar sesión -</button>
+        </div>
+        <div class="main-content">
+            <h1 id="greeting" th:text="|Hola ${pnombre}|"/>
+            <h3 th:text="|Semestre: ${semestre}|"></h3>
+            <div id="content">
+                <p th:text="|Tu CUI es: ${cui}|"/>
+                <p th:text="|Promedio: ${promedio}|"/>
+            </div>
+        </div>
+    </div>
+    
+    <script th:text="|const cui = ${cui};|"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="scripts/perfil.js"></script>
 </body>
-<!--<form action="/aprobados?cui=${cui}" method="get">-->
-<!--    <ul>-->
-<!--        <li>-->
-<!--            <label for="cui">Cui:</label>-->
-<!--            <input type="text" id="cui" name="cui"/>-->
-<!--        </li>-->
-<!--        &lt;!&ndash;        <li>&ndash;&gt;-->
-<!--        &lt;!&ndash;            <label for="mail">Email:</label>&ndash;&gt;-->
-<!--        &lt;!&ndash;            <input type="email" id="mail" name="user_email"/>&ndash;&gt;-->
-<!--        &lt;!&ndash;        </li>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <li>&ndash;&gt;-->
-<!--        &lt;!&ndash;            <label for="msg">Message:</label>&ndash;&gt;-->
-<!--        &lt;!&ndash;            <textarea id="msg" name="user_message"></textarea>&ndash;&gt;-->
-<!--        &lt;!&ndash;        </li>&ndash;&gt;-->
-<!--    </ul>-->
-<!--    <div class="button">-->
-<!--        <button type="submit">Cursos Aprobados</button>-->
-<!--    </div>-->
-<!--</form>-->
-
-
 </html>

@@ -104,7 +104,7 @@ OR REPLACE FUNCTION get_semestre (cui_ bigint) RETURNS smallint AS $$
       SELECT CMAT.semestre, count(*) 
       FROM get_cursos_matriculados (cui_) CMAT 
       GROUP BY CMAT.semestre 
-      ORDER BY count DESC FETCH FIRST 1 ROW ONLY);
+      ORDER BY count DESC FETCH FIRST 1 ROW ONLY) AS semestre;
 $$ LANGUAGE SQL STABLE PARALLEL SAFE;
 
 /*

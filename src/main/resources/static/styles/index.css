@@ -1,0 +1,26 @@
+#login_container {
+  background-color:  var(--bg-login-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--bg-login-background-light); /* Sombra ligera */
+  width: 500px;
+  text-align: center;
+}
+
+h1, h3 {
+  color: var(--bg-login-foreground);
+}
+
+label {
+  color: var(--bg-login-label);
+}
+
+input[type="text"] {
+  border: 1px solid var(--bg-login-input-border);
+  color: var(--bg-login-input-color);
+  background-color: var(--bg-login-input-background);
+}
+
+#bg-img {
+  filter: brightness(50%);
+}

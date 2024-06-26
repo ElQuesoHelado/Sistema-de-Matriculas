@@ -9,23 +9,29 @@ import org.springframework.data.repository.CrudRepository;
 public interface AlumnoRepository extends CrudRepository<Alumno,Integer> {
     Alumno findById(int id);
 
-    @Query(nativeQuery = true,value = "SELECT * FROM get_historial(:id) ")
+    @Query(nativeQuery = true, value = "SELECT * FROM get_historial(:id) ")
     List<Curso> get_historial(int id);
 
-    @Query(nativeQuery = true,value = "SELECT * FROM get_cursos_aprobados(:id) ")
+    @Query(nativeQuery = true, value = "SELECT * FROM get_cursos_aprobados(:id) ")
     List<Curso> get_cursos_aprobados(int id);
 
-    @Query(nativeQuery = true,value = "SELECT * FROM get_cursos_reprobados(:id) ")
+    @Query(nativeQuery = true, value = "SELECT * FROM get_cursos_reprobados(:id) ")
     List<Curso> get_cursos_reprobados(int id);
 
-    @Query(nativeQuery = true,value = "SELECT * FROM get_cursos_matriculados(:id) ")
+    @Query(nativeQuery = true, value = "SELECT * FROM get_cursos_matriculados(:id) ")
     List<Curso> get_cursos_matriculados(int id);
 
-    @Query(nativeQuery = true,value = "SELECT * FROM get_cursos_matriculables(:id) ")
+    @Query(nativeQuery = true, value = "SELECT * FROM get_cursos_matriculables(:id) ")
     List<CursoMatriculable> get_cursos_matriculables(int id);
 
-    @Query(nativeQuery = true,value = "SELECT get_semestre(:id) ")
+    @Query(nativeQuery = true, value = "SELECT get_semestre(:id) ")
     Integer get_semestre(int id);
+
+    @Query(nativeQuery = true, value = "SELECT get_promedio_general(:id) ")
+    Double get_promedio_general(int id);
+
+    @Query(nativeQuery = true, value = "SELECT * FROM get_promedios(:id) ")
+    List<CursoPromedio> get_promedios(int id);
 
     //Con proyeccion, aparentemente es lento
     public static interface Curso {
@@ -38,6 +44,16 @@ public interface AlumnoRepository extends CrudRepository<Alumno,Integer> {
         int getDni_prof();
         String getProf_nombre();
         String getProf_apellido();
+    }
+
+    public static interface CursoPromedio{
+        int getCodigo();
+        String getNombre();
+        int getNota1();
+        int getNota2();
+        int getNota3();
+        Double getPromedio();
+        int getSemestre();
     }
 
     public static interface CursoMatriculable{

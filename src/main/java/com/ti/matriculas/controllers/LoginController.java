@@ -26,11 +26,8 @@ public class LoginController {
         Double promedio = repository.get_promedio_general(cui);
         model.addAttribute("cui",alumno.getCui());
         model.addAttribute("pnombre",alumno.getPnombre());
-        // model.addAttribute("snombre",alumno.getSnombre());
-        // model.addAttribute("papellido",alumno.getPapellido());
-        // model.addAttribute("sapellido",alumno.getSapellido());
         model.addAttribute("semestre",repository.get_semestre(cui));
-        model.addAttribute("promedio", String.format("%.02f", promedio));
+        model.addAttribute("promedio", Math.round(promedio));
 
         return "login";
     }

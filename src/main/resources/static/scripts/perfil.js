@@ -1,4 +1,22 @@
-const columns1 = [
+function primer_caracter_mayuscula(str) {
+    str = str.toLowerCase();
+    const capitalize = (word) => word.charAt(0).toUpperCase() + word.slice(1);
+    return str.split(" ").map((str) => {
+        if(str.search("^[ivIV]+$") != -1)
+            return str.toUpperCase();
+        return capitalize(str);
+    }).join(" ");
+}
+
+function mostrar_promedio(data, type, row) {
+    return parseFloat(data).toFixed(0);
+}
+
+function manejar_notas(data, type, row) {
+    return data.toString().trim().charAt(0) == "-" ? "Aún no disponible" : data;
+}
+
+const columnData1 = [
     {title: "Codigo", data: "codigo"},
     {title: "Curso", data: "nombre"},
     {title: "1° Unidad", data: "nota1"},
@@ -6,21 +24,50 @@ const columns1 = [
     {title: "3° Unidad", data: "nota3"},
     {title: "Semestre", data: "semestre"},
     {title: "DNI Docente", data: "dni_prof"},
-    {title: "Nombre Docente", data: "prof_nombre"},
-    {title: "Apellido Docente", data: "prof_apellido"},
+    {title: "Docente", data: "prof_nombre"},
+    {data: "prof_apellido"},
 ];
 
-const columns2 = [
+const columnDef1 = [
+    {
+        render: (data, type, row) => data + " " + row["prof_apellido"],
+        targets: 7
+    },
+    {
+        render: (data, row, type) => primer_caracter_mayuscula(data),
+        targets: 1
+    },
+    {
+        render: manejar_notas,
+        targets: [2,3,4]
+    },
+    {visible: false, targets: 8}
+];
+const column1 = [columnData1, columnDef1];
+
+const columnData2 = [
     {title: "Codigo", data: "codigo"},
     {title: "Curso", data: "nombre"},
     {title: "Creditos", data: "creditos"},
     {title: "Semestre", data: "semestre"},
     {title: "DNI Docente", data: "codigo_doc"},
     {title: "Nombre Docente", data: "docente_nombre"},
-    {title: "Apellido Docente", data: "docente_apellido"},
+    {data: "docente_apellido"},
 ];
+const columnDef2 = [
+    {
+        render: (data, type, row) => data + " " + row["docente_apellido"],
+        targets: 5
+    },
+    {
+        render: (data, type, row) => primer_caracter_mayuscula(data),
+        targets: 1
+    },
+    {visible: false, targets: 6}
+];
+const column2 = [columnData2, columnDef2];
 
-const columns3 = [
+const columnData3 = [
     {title: "Codigo", data: "codigo"},
     {title: "Curso", data: "nombre"},
     {title: "1° Unidad", data: "nota1"},
@@ -29,6 +76,21 @@ const columns3 = [
     {title: "Promedio", data: "promedio"},
     {title: "Semestre", data: "semestre"},
 ];
+const columnDef3 = [
+    {
+        render: (data, row, type) => primer_caracter_mayuscula(data),
+        targets: 1,
+    },
+    {
+        render: mostrar_promedio,
+        targets: 5
+    },
+    {
+        render: manejar_notas,
+        targets: [2,3,4]
+    },
+];
+const column3 = [columnData3, columnDef3];
 
 function toggleSubmenu(id) {
     var submenu = document.getElementById(id);
@@ -39,7 +101,7 @@ function toggleSubmenu(id) {
     }
 }
 
-function requestTable(url, header, columns) {
+function requestTable(url, header, column) {
     $.ajax({
         url: url,
         method: "get",
@@ -53,34 +115,35 @@ function requestTable(url, header, columns) {
         $("#table").DataTable(
             {
                 data: data,
-                columns: columns
+                columns: column[0],
+                columnDefs: column[1]
             }
         )
     });
 }
 
 function verCursosAprobados() {
-    requestTable("/aprobados", "Cursos aprobados", columns1);
+    requestTable("/aprobados", "Cursos aprobados", column1);
 }
 
 function verCursosReprobados() {
-    requestTable("/reprobados", "Cursos reprobados", columns1);
+    requestTable("/reprobados", "Cursos reprobados", column1);
 }
 
 function verPromedios() {
-    requestTable("/promedios", "Promedios", columns3);
+    requestTable("/promedios", "Promedios", column3);
 }
 
 function verMatriculados() {
-    requestTable("/matriculados", "Matriculables", columns1);
+    requestTable("/matriculados", "Matriculados", column1);
 }
 
 function verMatriculables() {
-    requestTable("/matriculables", "Matriculables", columns2);
+    requestTable("/matriculables", "Matriculables", column2);
 }
 
 function verHistorial() {
-    requestTable("/historial", "Historial", columns1);
+    requestTable("/historial", "Historial", column1);
 }
 
 function cerrarSesion() {

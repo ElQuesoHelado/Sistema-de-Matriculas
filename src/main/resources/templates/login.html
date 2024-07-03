@@ -35,7 +35,7 @@
         <button style="text-align: center;" class="logout-button" onclick="cerrarSesion()">- Cerrar sesión -</button>
     </div>
         <div class="main-content">
-            <h1 id="greeting" th:text="|Hola ${pnombre}|"></h1>
+            <h1 id="greeting" th:text="|Hola ${pnombre} ${papellido}|"></h1>
             <span th:if="${semestre}"><h3 th:text="|Semestre actual: ${semestre}|"></h3></span>
             <span th:unless="${semestre}"><h3>No se ha matriculado en algún semestre</h3></span>
             <div id="content">

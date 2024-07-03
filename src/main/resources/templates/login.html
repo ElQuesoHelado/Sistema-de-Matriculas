@@ -5,14 +5,17 @@
     <title>Sistema de Matrículas</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
     <link rel="stylesheet" href="styles/perfil.css">
+    <script async th:text="|const cui = ${cui}; const promedio=${promedio}|"></script>
+    <script async src="scripts/tables.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Menú</h2>
+    <div class="sidebar">
+        <span>
+            <h2>Home</h2>
             <ul>
+                <li><button onclick="verPerfil()">Mi Perfil</button></li>
                 <li>
-                    <button onclick="toggleSubmenu('perfilSubmenu')">Mi Perfil</button>
+                <button onclick="toggleSubmenu('perfilSubmenu')">Cursos</button>
                     <ul id="perfilSubmenu" class="submenu">
                         <li><button onclick="verCursosAprobados()">‎  ‎  ‎ Cursos aprobados</button></li>
                         <li><button onclick="verCursosReprobados()">‎  ‎  ‎ Cursos reprobados</button></li>
@@ -28,21 +31,18 @@
                 </li>
                 <li><button onclick="verHistorial()">Historial</button></li>
             </ul>
-            <button style="text-align: center;" class="logout-button" onclick="cerrarSesion()">- Cerrar sesión -</button>
-        </div>
+        </span>
+        <button style="text-align: center;" class="logout-button" onclick="cerrarSesion()">- Cerrar sesión -</button>
+    </div>
         <div class="main-content">
-            <h1 id="greeting" th:text="|Hola ${pnombre}|"/>
+            <h1 id="greeting" th:text="|Hola ${pnombre}|"></h1>
             <h3 th:text="|Semestre actual: ${semestre}|"></h3>
             <div id="content">
-                <p th:text="|Tu CUI es: ${cui}|"/>
-                <p th:text="|Promedio: ${promedio}|"/>
             </div>
         </div>
     </div>
-    
-    <script th:text="|const cui = ${cui};|"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script src="scripts/perfil.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 </body>
 </html>

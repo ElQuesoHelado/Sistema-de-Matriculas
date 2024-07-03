@@ -175,17 +175,25 @@ OR REPLACE FUNCTION get_cursos_matriculables (cui_ bigint) RETURNS TABLE (
   docente_nombre text,
   docente_apellido text
 ) AS $$ 
+    -- Se precalculan ciertas funciones usadas multiples veces
+    WITH aprobados AS(
+      SELECT codigo FROM get_cursos_aprobados(cui_)
+    ),
+    matriculados AS(
+        SELECT codigo FROM get_cursos_matriculados(cui_)
+    )
+
     SELECT CR.codigo, CR.nombre, CR.creditos, CR.semestre, CR.codigo_doc, DOC.pnombre, DOC.papellido
     FROM curso CR, docente DOC
     WHERE CR.codigo 
     NOT IN( -- Se excluyen aprobados
-        SELECT AP.codigo 
-        FROM get_cursos_aprobados(cui_) AP
+        SELECT codigo 
+        FROM aprobados
     )
     -- Si se esta por matricular, no se deberia estar llevando cursos
     AND CR.codigo NOT IN( --Se excluyen llevados actualmente
-        SELECT MA.codigo 
-        FROM get_cursos_matriculados(cui_) MA
+        SELECT codigo 
+        FROM matriculados
       )
     
     AND CR.semestre <= get_semestre(cui_) + 2 -- Semestre no tan elevado
@@ -193,26 +201,26 @@ OR REPLACE FUNCTION get_cursos_matriculables (cui_ bigint) RETURNS TABLE (
     AND ( -- Prerequisito 1
       EXISTS( -- Aprobado
         SELECT 1 
-        FROM get_cursos_aprobados(cui_) AP
-        WHERE AP.codigo = CR.prerequisito1
+        FROM aprobados
+        WHERE codigo = CR.prerequisito1
       )
       OR EXISTS( -- Lo esta llevando
         SELECT 1 
-        FROM get_cursos_matriculados(cui_) AP
-        WHERE AP.codigo = CR.prerequisito1
+        FROM matriculados
+        WHERE codigo = CR.prerequisito1
       )
       OR CR.prerequisito1 IS NULL
     )
     AND ( -- Prerequisito 2
       EXISTS( -- Aprobado
         SELECT 1 
-        FROM get_cursos_aprobados(cui_) AP
-        WHERE AP.codigo = CR.prerequisito2
+        FROM aprobados
+        WHERE codigo = CR.prerequisito2
       ) 
       OR EXISTS( -- Lo esta llevando
         SELECT 1 
-        FROM get_cursos_matriculados(cui_) AP
-        WHERE AP.codigo = CR.prerequisito2
+        FROM matriculados
+        WHERE codigo = CR.prerequisito2
       )
       OR CR.prerequisito2 IS NULL
     )

@@ -16,7 +16,17 @@ Web o apk, login que deja ambos
 
 ## Falta
 
-- Algo de contrasenias??
+- Bug al buscar un cachimbo, funcion double en el calculo del promedio
+- Frontend mas estetico
+    1. Primera pagina: nombre, cui, semestre, promedio general, cantidad de creditos aprobados y desaprobados, cantidad de creditos matriculados, se tiene que hacer una distincion entre alumno y egresado(hacerlo con suma de creditos totales??),
+    2. Cursos matriculados: docente opcional
+    3. Cursos llevados: Nombre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
+    4. Cursos aptos para llevar: nombre, semestre, creditos
+- *En tabla de matriculas, otra columna de # de matricula*
+  - Todos empiezan con 1 al matricularse
+- Bug en get_cursos_matriculables
+  - No lleva algunos cursos de su semestre, estos tienen que estar en matriculables
+- Algo de contraseñas??
 - Promedio semestre anterior
   - Se necesita año de matricula
 - Registro final de matriculas con servidor
@@ -63,15 +73,3 @@ Web o apk, login que deja ambos
 - Se matricula curso jalado, se actualiza la entrada en la tabla
 
 ![matricula](assets/matricula.png)
-
-- Tenemos un sistema de matriculas
-- Java con Spring Boot para el servidor y PostgreSQL para base de datos
-- Primera pagina es estatica, segunda con thymeleaf
-  - Todo demas es hecho en javascript, con request REST
-- Cui no existentes da su error
-- Pensando a futuro, los alumnos tienen cursos jalados en la BD
-- Promedios(del historial), promedio general(de los promedios), aprobados, reprobados, historial, matriculados
-- Nuestros matriculables se basan en:
-    1. jalados
-    2. semestre actual no tan alto
-    3. cursos que esta llevando(Se es optimista, los asumimos como aprobados)

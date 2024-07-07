@@ -22,10 +22,7 @@ Web o apk, login que deja ambos
     2. Cursos matriculados: docente opcional
     3. Cursos llevados: Nombre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
     4. Cursos aptos para llevar: nombre, semestre, creditos
-- *En tabla de matriculas, otra columna de # de matricula*
-  - Todos empiezan con 1 al matricularse
-- Bug en get_cursos_matriculables
-  - No lleva algunos cursos de su semestre, estos tienen que estar en matriculables
+- \# de matricula **Random?**
 - Algo de contraseñas??
 - Promedio semestre anterior
   - Se necesita año de matricula

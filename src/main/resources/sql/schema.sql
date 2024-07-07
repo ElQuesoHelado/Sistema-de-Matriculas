@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS "alumno" (
 	"pnombre" text NOT NULL,
 	"snombre" text,
 	"papellido" text NOT NULL,
-	"sapellido" text NOT NULL,
+	"sapellido" text,
 	"email1" text NOT NULL,
 	"email2" text,
 	PRIMARY KEY ("cui")
@@ -41,9 +41,10 @@ CREATE TABLE IF NOT EXISTS "curso" (
 CREATE TABLE IF NOT EXISTS "matricula" (
 	"cui" bigint NOT NULL,
 	"codigo_curso" bigint NOT NULL,
-	"nota1" numeric(10, 0) NOT NULL,
-	"nota2" numeric(10, 0) NOT NULL,
-	"nota3" numeric(10, 0) NOT NULL
+	"nota1" real NOT NULL,
+	"nota2" real NOT NULL,
+	"nota3" real NOT NULL,
+	"numero" smallint NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "docente" (
@@ -51,7 +52,7 @@ CREATE TABLE IF NOT EXISTS "docente" (
 	"pnombre" text NOT NULL,
 	"snombre" text,
 	"papellido" text NOT NULL,
-	"sapellido" text NOT NULL,
+	"sapellido" text,
 	"email1" text NOT NULL,
 	PRIMARY KEY ("dni")
 );

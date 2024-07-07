@@ -1,6 +1,6 @@
 INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, email2) VALUES
 (20243472, 79560429, 'Karina', 'Paola', 'Calcina', 'Chuquipalla', 'kcalcinac@unsa.edu.pe', NULL),/*ya esta */
-(20243465, 20610481, 'Diego', '', 'Canqui', 'Ecos', 'dcanqui@unsa.edu.pe', NULL), 
+(20243465, 20610481, 'Diego', NULL, 'Canqui', 'Ecos', 'dcanqui@unsa.edu.pe', NULL), 
 (20248916, 63219952, 'Mateo', 'Santiago', 'Flores', 'Gonzales', 'mateo.flores@mail.com', 'mateo.flores@mail.com'),/*ya esta */
 (20240826, 69883942, 'Moises', 'Robert', 'Ccaso', 'Idme', 'mccasoi@unsa.edu.pe', NULL),
 (20240827, 19208928, 'Elyud', 'Edgar', 'Chayna', 'Calcina', 'echaynac@unsa.edu.pe', NULL),/*ya esta */
@@ -10,7 +10,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20243470, 94844283, 'Leo', 'Valentino', 'Sanchez', 'Rodriguez', 'leo.sanchez@mail.com', 'leo.sanchez@mail.com'),/*ya esta */
 (20240832, 47531839, 'Sergio', 'Felipe', 'Delgado', 'Amado', 'sdelgadoa@unsa.edu.pe', NULL),
 (20242427, 23665803, 'Stephano', 'Gian Pierre', 'Delgado', 'Chavez', 'sdelgadoch@unsa.edu.pe', NULL),/*ya esta */
-(20240834, 42113428, 'Estrella', '', 'Huarsaya', '', 'estrella.huarsaya@mail.com', 'estrella.huarsaya@mail.com'),/*ya esta */
+(20240834, 42113428, 'Estrella', NULL, 'Huarsaya', NULL, 'estrella.huarsaya@mail.com', 'estrella.huarsaya@mail.com'),/*ya esta */
 (20242428, 92491167, 'Williams', 'Albert', 'Rivera', 'Mamani', 'williams.rivera@mail.com', 'williams.rivera@mail.com'),/*ya esta */
 (20243473, 11975450, 'David', 'Audusto', 'Quispe', 'Lloccallasi', 'david.quispe@mail.com', 'david.quispe@mail.com'),/*ya esta */
 (20242425, 55981917, 'Luis', 'Antonio', 'Ponce', 'Valdivia', 'luis.ponce@mail.com', 'luis.ponce@mail.com'),/*ya esta */
@@ -28,7 +28,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20243464, 59312474, 'Marcos', 'Abel', 'Sanca', 'Turpo', 'msancat@unsa.edu.pe', NULL),
 (20240840, 69478728, 'Deysi', 'Camila', 'Ramos', 'Quispe', 'dramosqui@unsa.edu.pe', NULL),
 (20240828, 60780362, 'Edu', 'Andre', 'Sucari', 'Ccansaya', 'esucari@unsa.edu.pe', NULL),
-(20230576, 60780364,'Camila','','Carpio','Mollo','ccarpiomo@unsa.edu.pe', NULL),
+(20230576, 60780364,'Camila',NULL,'Carpio','Mollo','ccarpiomo@unsa.edu.pe', NULL),
 (20232281, 60780365,'Yuri','gabriel', 'Cauna','Quicaño','ycauna@unsa.edu.pe', NULL),
 (20233586, 85331581, 'Fernando', 'Alonso', 'Surco', 'Cora', 'fsurcoc@unsa.edu.pe', NULL),/*ya esta */
 (20233597, 77257681, 'Gerald', 'Steve', 'Supo', 'Molina', 'gsupom@unsa.edu.pe', NULL),
@@ -47,7 +47,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20231539, 67237638, 'Luis', 'Manuel', 'Gutierrez', 'Umeres', 'lgutierrezu@unsa.edu.pe', NULL),
 (20231538, 36717055, 'Jilmar', 'Santiago', 'Huaraca', 'Quispe', 'jhuaracaq@unsa.edu.pe', NULL),
 (20233596, 58056373, 'Carlo', 'Anthony', 'Infantes', 'Huanca', 'cinfantesh@unsa.edu.pe', NULL),
-(20232278, 19102912, 'Daysi', '', 'Jara', 'Arisaca', 'djaraa@unsa.edu.pe', NULL),
+(20232278, 19102912, 'Daysi', NULL, 'Jara', 'Arisaca', 'djaraa@unsa.edu.pe', NULL),
 (20233584, 25342549, 'Hellen', 'Grace', 'Juan de dios', 'Delgado', 'hjuandedios@unsa.edu.pe', NULL),
 (20230584, 76030688, 'Misael', 'Jesus', 'Palomino', 'Rivadeneyra', 'mpalominori@unsa.edu.pe', NULL),
 (20233587, 84767059, 'Mauricio', 'Aaron', 'Nieto', 'Lloque', 'mnietoll@unsa.edu.pe', NULL),
@@ -62,7 +62,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20233591, 17693404, 'Fernando', 'Enrique', 'Llosa', 'Manchego', 'fllosam@unsa.edu.pe', NULL),
 (20230580, 90796305, 'Ivan', 'Alexander', 'Lopez', 'Zegarra', 'ilopezz@unsa.edu.pe', NULL),
 (20230581, 81101262, 'Adrian', 'Valentino', 'Machaca', 'Rodriguez', 'amachacaro@unsa.edu.pe', NULL),
-(20232274, 20589737, 'Valeria', '', 'Guzman', 'Avalos', 'vguzmana@unsa.edu.pe', NULL),/*ya esta */
+(20232274, 20589737, 'Valeria', NULL, 'Guzman', 'Avalos', 'vguzmana@unsa.edu.pe', NULL),/*ya esta */
 (20233595, 37770543, 'Cesar', 'Alejandro', 'Hañari', 'Cutipa', 'chanaricu@unsa.edu.pe', NULL),
 (20233583, 28466635, 'Fabricio', 'Del Piero Ernesto', 'Huayhua', 'Quispe', 'fhuayhuaqu@unsa.edu.pe', NULL),/*ya esta */
 (20232280, 38656136, 'Mauricio', 'Fernando', 'Huallpa', 'Gonzales', 'mhuallpago@unsa.edu.pe', NULL),
@@ -113,18 +113,18 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20223082, 93277395, 'Christian', 'Daniel', 'Taipe', 'Saraza', 'ctaipes@unsa.edu.pe', NULL),
 (20222146, 95843477, 'Fernando', 'Anibal', 'Suca', 'Quispe', 'fsuca@unsa.edu.pe', NULL),
 (20222142, 18412798, 'Katherin', 'Milagros', 'Zenayuca', 'Corimanya', 'kzenayuca@unsa.edu.pe', NULL),/*ya esta */
-(20224271, 56422719, 'Ronald', '', 'Ventura', 'Venero', 'rventurave@unsa.edu.pe', NULL),
+(20224271, 56422719, 'Ronald', NULL, 'Ventura', 'Venero', 'rventurave@unsa.edu.pe', NULL),
 (20222148, 80106629, 'Alessandro', 'Steven', 'Sumaria', 'Choqueluque', 'asumaria@unsa.edu.pe', NULL),
 (20222154, 86136603, 'Michael', 'Jarnie', 'Ticona', 'Larico', 'mticonala@unsa.edu.pe', NULL),/*ya esta */
 (20224270, 65290966, 'Jorge', 'Patrick', 'Taquiri', 'Guerreros', 'jtaquirig@unsa.edu.pe', NULL),
-(20223088, 67601684, 'Fabricio', '', 'Villantoy', 'Apaza', 'fvillantoy@unsa.edu.pe', NULL),
+(20223088, 67601684, 'Fabricio', NULL, 'Villantoy', 'Apaza', 'fvillantoy@unsa.edu.pe', NULL),
 (20220715, 59355495, 'Marko', 'Julio', 'Sumire', 'Ramos', 'msumirer@unsa.edu.pe', NULL),/*ya esta */
 (20220714, 51453085, 'Leonardo', 'Jesus', 'Ponze', 'Bellido', 'lponze@unsa.edu.pe', NULL),
 (20220716, 79077732, 'Daniel', 'Frank', 'Quinteros', 'Olgado', 'dquinoneso@unsa.edu.pe', NULL),
 (20224276, 91540088, 'Arleen', 'Maritza', 'Ferro', 'Vasquez', 'aferro@unsa.edu.pe', NULL),
 (20222155, 39646957, 'Manuel', 'Alonso', 'Flores', 'Coaguila', 'mflorescoag@unsa.edu.pe', NULL),/*ya esta */
 (20220724, 48600930, 'Leonardo', 'Gustavo', 'Gaona', 'Briceño', 'lgaonab@unsa.edu.pe', NULL),/*ya esta */
-(20223125, 80309195, 'Clever', '', 'Condori', 'Bernal', 'clever.condori@mail.com', 'clever.condori@mail.com'),/*ya esta */
+(20223125, 80309195, 'Clever', NULL, 'Condori', 'Bernal', 'clever.condori@mail.com', 'clever.condori@mail.com'),/*ya esta */
 (20220713, 81670016, 'Alvaro', 'Mauricio', 'Flores', 'Loza', 'afloresloz@unsa.edu.pe', NULL),
 (20224274, 16613681, 'Lenin', 'Michael', 'Huayhua', 'Carlos', 'lhuayhuac@unsa.edu.pe', NULL),/*ya esta */
 (20220161, 37645572, 'Alejandro', 'Oscar', 'Gonzales', 'Torres', 'agonzalestor@unsa.edu.pe', NULL),
@@ -170,7 +170,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20213130, 49490859, 'Mauricio', 'Sebastian', 'Robles', 'Ramos', 'mrobles@unsa.edu.pe', NULL),
 (20211819, 72417860, 'Owen', 'Haziel', 'Roque', 'Sosa', 'oroque@unsa.edu.pe', NULL),
 (20213132, 69593039, 'Axel', 'Jhuan', 'Solis', 'Zamata', 'asolisz@unsa.edu.pe', NULL),
-(20213120, 85281245, 'Kristopher', '', 'Rospigliosi', 'Gonzales', 'krospigliosig@unsa.edu.pe', NULL),
+(20213120, 85281245, 'Kristopher', NULL, 'Rospigliosi', 'Gonzales', 'krospigliosig@unsa.edu.pe', NULL),
 (20210685, 88641883, 'Diego', 'Fernando', 'Saldaña', 'Moscoso', 'dsaldanam@unsa.edu.pe', NULL),
 (20210676, 41534283, 'Deivid', 'Andre', 'Valdivia', 'Zavaleta', 'dvaldiviaz@unsa.edu.pe', NULL),
 (20210683, 44626828, 'Sebastian', 'Agenor', 'Zamalloa', 'Molina', 'szamalloam@unsa.edu.pe', NULL),
@@ -185,15 +185,15 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20213127, 73997300, 'Juan', 'Carlos Antonio', 'Nizama', 'Cespedes', 'jnizama@unsa.edu.pe', NULL),
 (20210689, 57536272, 'Sergio', 'Daniel', 'Mogollon', 'Caceres', 'smogollon@unsa.edu.pe', NULL),
 (20213134, 27394097, 'Peter', 'Smith', 'Pacherres', 'Muñoz', 'ppacherres@unsa.edu.pe', NULL),
-(20213143, 40156264, 'Christian', '', 'Pardave', 'Espinoza', 'cpardave@unsa.edu.pe', NULL),
+(20213143, 40156264, 'Christian', NULL, 'Pardave', 'Espinoza', 'cpardave@unsa.edu.pe', NULL),
 (20210686, 46930985, 'Paul', 'Antony', 'Parizaca', 'Mozo', 'pparizaca@unsa.edu.pe', NULL),
-(20210695, 40779763, 'Leonardo', '', 'Montoya', 'Choque', 'lmontoyac@unsa.edu.pe', NULL),
+(20210695, 40779763, 'Leonardo', NULL, 'Montoya', 'Choque', 'lmontoyac@unsa.edu.pe', NULL),
 (20210694, 26881468, 'Sebastian', 'Andre', 'Ochoa', 'Ortiz', 'sochoao@unsa.edu.pe', NULL),
-(20210678, 49739897, 'Fabricio', '', 'Huaquisto', 'Quispe', 'fhuaquisto@unsa.edu.pe', NULL),
+(20210678, 49739897, 'Fabricio', NULL, 'Huaquisto', 'Quispe', 'fhuaquisto@unsa.edu.pe', NULL),
 (20213147, 45463047, 'Natalie', 'Marleny', 'Lazo', 'Paxi', 'nlazop@unsa.edu.pe', NULL),
 (20212159, 42094369, 'Andrea', 'Del rosario', 'Lopez', 'Condori', 'alopezco@unsa.edu.pe', NULL),
 (20210675, 24247835, 'Aldo', 'Raul', 'Martinez', 'Choque', 'amartinezch@unsa.edu.pe', NULL),
-(20212162, 41965522, 'Avelino', '', 'Lupo', 'Condori', 'alupoc@unsa.edu.pe', NULL),
+(20212162, 41965522, 'Avelino', NULL, 'Lupo', 'Condori', 'alupoc@unsa.edu.pe', NULL),
 (20213122, 14087525, 'Braulio', 'Nayap', 'Maldonado', 'Casilla', 'bmaldonadoc@unsa.edu.pe', NULL),
 (20211820, 28148161, 'Roy', 'Abel', 'Maldonado', 'Parejo', 'rmaldonadop@unsa.edu.pe', NULL),
 (20210693, 23543303, 'Princce', 'Yorwin', 'Mariños', 'Hilario', 'pmarinos@unsa.edu.pe', NULL),
@@ -235,7 +235,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20200727, 84344032, 'Fiorela', 'Estefany', 'Villarroel', 'Ramos', 'fvillarroel@unsa.edu.pe', NULL),
 (20202229, 85915386, 'Piero', 'Emiliano', 'Vizcarra', 'Vargas', 'pvizcarra@unsa.edu.pe', NULL),
 (20200724, 60151890, 'Josue', 'Gabriel', 'Sumare', 'Uscca', 'jsumare@unsa.edu.pe', NULL),
-(20200734, 30728588, 'Gabriel', '', 'Pacco', 'Huaraca', 'gpaccohu@unsa.edu.pe', NULL),/*ya esta */
+(20200734, 30728588, 'Gabriel', NULL, 'Pacco', 'Huaraca', 'gpaccohu@unsa.edu.pe', NULL),/*ya esta */
 (20202234, 22598856, 'Manuel', 'Angel', 'Nifla', 'Llallacachi', 'mnifla@unsa.edu.pe', NULL),
 (20202239, 90212939, 'Erick', 'Jesus', 'Perez', 'Chipa', 'eperezchi@unsa.edu.pe', NULL),
 (20200720, 90677246, 'Ricardo', 'Alexander', 'Rodriguez', 'Pumacayo', 'rrodriguezp@unsa.edu.pe', NULL),
@@ -246,7 +246,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20200728, 68405482, 'Albert', 'Daniel', 'Llica', 'Alvarez', 'allicaa@unsa.edu.pe', NULL),/*ya esta */
 (20200725, 42754928, 'Riomar', 'Marcial', 'Martinez', 'Velasquez', 'rmartinezve@unsa.edu.pe', NULL),
 (20200733, 29318599, 'Fabrizio', 'Miguel', 'Mattos', 'Cahui', 'fmattos@unsa.edu.pe', NULL),/*ya esta */
-(20200721, 36265744, 'Uberto', '', 'Garcia', 'Caceres', 'ugarcia@unsa.edu.pe', NULL),
+(20200721, 36265744, 'Uberto', NULL, 'Garcia', 'Caceres', 'ugarcia@unsa.edu.pe', NULL),
 (20200722, 74384956, 'Juan', 'Diego', 'Garcia', 'Macedo', 'jgarciamac@unsa.edu.pe', NULL),
 (20204681, 31025484, 'Ronald', 'Romario', 'Gutierrez', 'Arratia', 'rgutierrezar@unsa.edu.pe', NULL),/*ya esta */
 (20200556, 41859764, 'Kevin ', 'Joaquin', 'Chambi', 'Tapia', 'kchambit@unsa.edu.pe', NULL),/*ya esta */
@@ -269,7 +269,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20190754, 91663149, 'Santiago', 'Javier', 'Vilca', 'Limachi', 'svilcalim@unsa.edu.pe', NULL),
 (20192272, 87815344, 'Misael', 'Svante', 'Vilchez', 'Molina', 'mvilchezmo@unsa.edu.pe', NULL),
 (20192262, 71567825, 'Juan', 'Jose', 'Villalobos', 'Banos', 'jvillalobosb@unsa.edu.pe', NULL),
-(20190742, 24558203, 'Luisa', '', 'Villanueva', 'Guerrero', 'lvillanuevag@unsa.edu.pe', NULL),
+(20190742, 24558203, 'Luisa', NULL, 'Villanueva', 'Guerrero', 'lvillanuevag@unsa.edu.pe', NULL),
 (20192274, 37927348, 'Diego', 'Alonso', 'Zanabria', 'Sacsi', 'dzanabria@unsa.edu.pe', NULL),/*ya esta */
 (20190224, 63321150, 'Cristhian', 'Luis', 'Taipe', 'Huanca', 'ctaipe@unsa.edu.pe', NULL),
 (20192267, 80680402, 'Juan', 'Manuel', 'Soto', 'Begazo', 'jsotobe@unsa.edu.pe', NULL),
@@ -284,7 +284,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20190741, 50096636, 'Paul', 'Jesus', 'Quispe', 'Morocco', 'pquispemor@unsa.edu.pe', NULL),
 (20190743, 37938168, 'Luis', 'Angel', 'Moroco', 'Ramos', 'lmoroco@unsa.edu.pe', NULL),
 (20190747, 97991614, 'Imanol', 'Brayan', 'Moscoso', 'Apaza', 'imoscosoa@unsa.edu.pe', NULL),
-(20192271, 63412110, 'Eden', '', 'Palli', 'Livisi', 'epalli@unsa.edu.pe', NULL),
+(20192271, 63412110, 'Eden', NULL, 'Palli', 'Livisi', 'epalli@unsa.edu.pe', NULL),
 (20190744, 79663240, 'Joel', 'Cristian', 'Perca', 'Quispe', 'jperca@unsa.edu.pe', NULL),
 (20193259, 72280117, 'Maryori', 'Lizeth', 'Hilares', 'Angelo', 'mhilaresa@unsa.edu.pe', NULL),
 (20190049, 28384957, 'Alejandro', 'Javier', 'Gonzales', 'Condori', 'agonzalescon@unsa.edu.pe', NULL),
@@ -292,7 +292,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20190748, 69111621, 'Elizabeth', 'Yasmin', 'Huanca', 'Parqui', 'ehuancap@unsa.edu.pe', NULL),
 (20190760, 75647401, 'Jim', 'Leonardo', 'Huertas', 'Canaza', 'jhuertas@unsa.edu.pe', NULL),
 (20190755, 60780379,'Alessander','jesus', 'Carazas','Quispe','acarazas@unsa.edu.pe', NULL),/*ya esta */
-(20193261, 88572183, 'Jhonathan', '', 'Clavijo', 'Chacaltana', 'jclavijoc@unsa.edu.pe', NULL),
+(20193261, 88572183, 'Jhonathan', NULL, 'Clavijo', 'Chacaltana', 'jclavijoc@unsa.edu.pe', NULL),
 (20190762, 60780380,'Tomas','gabriel', 'Cary','Bernal','tcary@unsa.edu.pe', NULL),
 (20192268, 19675088, 'Gabriela ', 'Angel', 'Chipana', 'Perez', 'gchipanap@unsa.edu.pe', NULL),
 (20180685, 84604970, 'Angel', 'Abraham', 'Apaza', 'Quispe', 'aapazaquis@unsa.edu.pe', NULL),
@@ -315,7 +315,7 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20182363, 47029754, 'Eduardo', 'Felipe', 'Valdivia', 'Quispe', 'evaldiviaq@unsa.edu.pe', NULL),
 (20182911, 11871740, 'Sennayda', 'Sadid', 'Rimache', 'Choquehuanca', 'srimache@unsa.edu.pe', NULL),
 (20181796, 62588538, 'Romeo', 'Alipio', 'Romero', 'Rocca', 'rromeroro@unsa.edu.pe', NULL),
-(20180717, 30815052, 'Merisabel', '', 'Ruelas', 'Quenaya', 'mruelasq@unsa.edu.pe', NULL),
+(20180717, 30815052, 'Merisabel', NULL, 'Ruelas', 'Quenaya', 'mruelasq@unsa.edu.pe', NULL),
 (20182906, 39178303, 'Fernanda', 'Anthoanette', 'Paredes', 'Escobedo', 'fparedese@unsa.edu.pe', NULL),
 (20181742, 26801350, 'Angelo', 'Aldo', 'Perez', 'Rodriguez', 'aperezr@unsa.edu.pe', NULL),
 (20183290, 74784936, 'Cristhian', 'David', 'Huanca', 'Olazabal', 'chuancao@unsa.edu.pe', NULL),
@@ -359,18 +359,18 @@ INSERT INTO alumno (cui, dni, pnombre, snombre, papellido, sapellido, email1, em
 (20130944, 33960558, 'Kenny', 'David', 'Borja', 'Valencia', 'kborjav@unsa.edu.pe', NULL),
 (20134112, 24050270, 'Vanessa', 'Mayra', 'Macedo', 'Huaman', 'vmacedoh@unsa.edu.pe', NULL),
 (20132937, 94322385, 'Eder', 'Alberto', 'Calderon', 'Carrizales', 'ecalderoncar@unsa.edu.pe', NULL),
-(20123493, 22646582, 'Selene', '', 'Barrios', 'Cornejo', 'sbarrios@unsa.edu.pe', NULL),
+(20123493, 22646582, 'Selene', NULL, 'Barrios', 'Cornejo', 'sbarrios@unsa.edu.pe', NULL),
 (20123723, 29794338, 'Franks', 'Jhon', 'Colque', 'Zegarra', 'fcolqueze@unsa.edu.pe', NULL),/*ya esta */
 (20123377, 54172401, 'Alejandra', 'Pamela', 'Bustinza', 'Cornejo', 'abustinzaco@unsa.edu.pe', NULL),
 (20110752, 14576258, 'Carlos', 'Argelio', 'Bautista', 'Lopez', 'cbautistal@unsa.edu.pe', NULL),
-(20113478, 68577566, 'Gleddynuri', 'Marbel', 'Picha', '', 'gpichac@unsa.edu.pe', NULL),
-(20111697, 42351773, 'Diego', '', 'Quispe', 'Candelario', 'dquispecan@unsa.edu.pe', NULL),/*ya esta */
+(20113478, 68577566, 'Gleddynuri', 'Marbel', 'Picha', NULL, 'gpichac@unsa.edu.pe', NULL),
+(20111697, 42351773, 'Diego', NULL, 'Quispe', 'Candelario', 'dquispecan@unsa.edu.pe', NULL),/*ya esta */
 (20111698, 24527007, 'Cecilia', 'Del Pilar', 'Vilca', 'Alvites', 'cvilcaal@unsa.edu.pe', NULL),/*ya esta */
 (20111683, 25129195, 'Jefferson', 'Miguel', 'Flores', 'Herrera', 'jfloreshe@unsa.edu.pe', NULL),
-(20102045, 23378056, 'Gerald', '', 'Pachari', 'Millio', 'gpachari@unsa.edu.pe', NULL),
+(20102045, 23378056, 'Gerald', NULL, 'Pachari', 'Millio', 'gpachari@unsa.edu.pe', NULL),
 (20095936, 10072837, 'David', 'Ernesto', 'Tamo', 'Turpo', 'dtamo@unsa.edu.pe', NULL),
-(20084621, 87492488, 'Jenny', '', 'Huanca', 'Anquise', 'jhuancaan@unsa.edu.pe', NULL),
-(20083194, 60780389,'Andres','','Carrasco','Quispe','acarrascoq@unsa.edu.pe', NULL),/*ya esta */
+(20084621, 87492488, 'Jenny', NULL, 'Huanca', 'Anquise', 'jhuancaan@unsa.edu.pe', NULL),
+(20083194, 60780389,'Andres',NULL,'Carrasco','Quispe','acarrascoq@unsa.edu.pe', NULL),/*ya esta */
 (20082766, 77570242, 'Fernando', ' ', 'Chara', 'Chunga', 'fchara@unsa.edu.pe', NULL),
 (20052826, 41101934, 'Ingrid', 'Sally', 'Espinel', 'Quispe', 'iespinel@unsa.edu.pe', NULL),
 (20024030, 39437376, 'Jose', 'Carlos', 'Paredes', 'Malaga', 'jparedesma@unsa.edu.pe', NULL);

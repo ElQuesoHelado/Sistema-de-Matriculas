@@ -1,10 +1,10 @@
 /*  
- *  Historial completo de cursos
-   */
-DROP FUNCTION IF EXISTS get_historial(bigint);
+*  Historial completo de cursos
+*/
+DROP FUNCTION IF EXISTS get_historial (bigint);
 
 CREATE
-OR REPLACE FUNCTION get_historial(cui_ bigint) RETURNS TABLE (
+OR REPLACE FUNCTION get_historial (cui_ bigint) RETURNS TABLE (
   codigo bigint,
   nombre text,
   nota1 numeric,
@@ -21,10 +21,9 @@ OR REPLACE FUNCTION get_historial(cui_ bigint) RETURNS TABLE (
     ORDER BY C.semestre;
 $$ LANGUAGE SQL STABLE PARALLEL SAFE;
 
-
 /*  
- *  Buscamos los cursos con notas incompletas
- * */
+*  Buscamos los cursos con notas incompletas
+* */
 DROP FUNCTION IF EXISTS get_cursos_matriculados (bigint);
 
 CREATE
@@ -112,26 +111,24 @@ $$ LANGUAGE SQL STABLE PARALLEL SAFE;
  * *** Se necesita una forma de determinar los cursos
  * llevados en el semestre anterior ***
  */
-
 /*
 DROP FUNCTION IF EXISTS get_promedio_semestre (bigint);
 
 CREATE
 OR REPLACE function get_promedio_semestre (cui_ bigint) returns decimal AS $$
 BEGIN
-  RETURN QUERY 
-  SELECT 1 FROM alumno;
+RETURN QUERY 
+SELECT 1 FROM alumno;
 END;
 $$ language plpgsql;
 */
-
 /*
  * Obtenemos todos los promedios, excepto los matriculados
  */
-DROP FUNCTION IF EXISTS get_promedios(bigint);
+DROP FUNCTION IF EXISTS get_promedios (bigint);
 
 CREATE
-OR REPLACE function get_promedios(cui_ bigint) RETURNS TABLE (
+OR REPLACE function get_promedios (cui_ bigint) RETURNS TABLE (
   codigo bigint,
   nombre text,
   nota1 numeric,
@@ -139,7 +136,7 @@ OR REPLACE function get_promedios(cui_ bigint) RETURNS TABLE (
   nota3 numeric,
   promedio decimal,
   semestre smallint
-  )AS $$
+) AS $$
   SELECT C.codigo, C.nombre, MA.nota1, MA.nota2, MA.nota3, (( MA.nota1 + MA.nota2+ MA.nota3 ) /3.0), C.semestre
   FROM matricula MA, curso C
   WHERE MA.cui = cui_
@@ -150,10 +147,10 @@ $$ language SQL STABLE PARALLEL SAFE;
 /*
  * Obtenemos promedio de todos los cursos excepto los matriculados
  */
-DROP FUNCTION IF EXISTS get_promedio_general(bigint);
+DROP FUNCTION IF EXISTS get_promedio_general (bigint);
 
 CREATE
-OR REPLACE function get_promedio_general(cui_ bigint) returns decimal AS $$
+OR REPLACE function get_promedio_general (cui_ bigint) returns decimal AS $$
     SELECT AVG((( MA.nota1 + MA.nota2+ MA.nota3 ) /3.0))
     FROM matricula MA 
     WHERE MA.cui = cui_ 

@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class LoginController {
+public class DashboardController {
     private final AlumnoRepository repository;
 
     @Autowired
-    public LoginController(AlumnoRepository repository) {
+    public DashboardController(AlumnoRepository repository) {
         this.repository = repository;
     }
 
     //TODO: Cambio a post??
-    @GetMapping("/login")
-    public String login(@RequestParam(name = "cui") int cui, Model model) {
+    @GetMapping("/dashboard")
+    public String dashboard(@RequestParam(name = "cui") int cui, Model model) {
         Alumno alumno = repository.findById(cui);
         if (alumno == null)
             return String.format("redirect:/?error=No se encontro el CUI %d", cui);
@@ -38,6 +38,6 @@ public class LoginController {
         model.addAttribute("creditos_reprobados", creditos_reprobados);
         model.addAttribute("creditos_matriculados", creditos_matriculados);
 
-        return "login";
+        return "dashboard";
     }
 }

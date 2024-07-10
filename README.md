@@ -1,11 +1,14 @@
 # Grupo 2
 
+## Final 24 julio
+
+- 15 min, todos exponen, funcionar en vivo.
+- Subir:
+  - Codigo, un reporte, documentacion no tan especifica, ciertas partes del codigo
+
 ## Sistema completo
 
-Web o apk, login que deja ambos
-
-### Sistema de matriculas
-
+- Web o apk, login que deja ambos
 - Notas, prerequisitos, semestres adecuados, no mucho adelantado, cupos, logins
 - BD con lo necesario de $todo$ el salon
 
@@ -13,21 +16,23 @@ Web o apk, login que deja ambos
 
 - Todos los calculos posibles de notas
 - Creditos, cupos, grupos(2 max), 40 personas
+  - Con meritocracia
 
 ## Falta
 
+- **Organizar todas las paginas**
+- *Matricular a alguien*
+- DNI como contraseña, login
 - Bug al buscar un cachimbo, funcion double en el calculo del promedio
 - Frontend mas estetico
     1. Primera pagina: nombre, cui, semestre, promedio general, cantidad de creditos aprobados y desaprobados, cantidad de creditos matriculados, se tiene que hacer una distincion entre alumno y egresado(hacerlo con suma de creditos totales??),
-    2. Cursos matriculados: docente opcional
-    3. Cursos llevados: Nombre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
+    2. Cursos matriculados: semestre, creditos, docente opcional
+    3. Cursos llevados: Nombre, semestre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
     4. Cursos aptos para llevar: nombre, semestre, creditos
-- \# de matricula **Random?**
-- Algo de contraseñas??
+- \# de matricula **Random**
 - Promedio semestre anterior
   - Se necesita año de matricula
 - Registro final de matriculas con servidor
-  - Con meritocracia
 
 ## DB
 

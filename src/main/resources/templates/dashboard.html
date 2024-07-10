@@ -54,7 +54,7 @@
             <div class="collapse collapse-horizontal" id="cui" th:text="|&nbsp;CUI:&nbsp;${cui}|"></div>
           </div>
         </h1>
-        <div class="rounded border p-3 bg-white">
+        <div class="rounded border p-3 bg-white text-start">
           <span th:if="${semestre}" th:text="|Semestre actual: ${semestre}|"></span> <br>
           <span th:unless="${semestre}">No se ha matriculado en algún semestre <br></span>
           <span th:text="|Promedio: ${promedio}|"></span><br><br>

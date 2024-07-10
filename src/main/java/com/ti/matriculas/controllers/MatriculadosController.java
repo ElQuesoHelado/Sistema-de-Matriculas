@@ -21,7 +21,7 @@ public class MatriculadosController {
     }
 
     @GetMapping("/matriculados")
-    public List<AlumnoRepository.Curso> matriculados(@RequestParam(name = "cui") int cui, Model model) {
+    public List<AlumnoRepository.CursoDocente> matriculados(@RequestParam(name = "cui") int cui, Model model) {
         return repository.get_cursos_matriculados(cui);
     }
 }

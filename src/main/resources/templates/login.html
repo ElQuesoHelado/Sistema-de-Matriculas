@@ -37,7 +37,13 @@
         <div class="main-content">
             <h1 id="greeting" th:text="|Hola ${pnombre} ${papellido}|"></h1>
             <span th:if="${semestre}"><h3 th:text="|Semestre actual: ${semestre}|"></h3></span>
-            <span th:unless="${semestre}"><h3>No se ha matriculado en algún semestre</h3></span>
+            <span th:unless="${semestre}"><h3>No se ha matriculado en algún semestre </h3></span>
+
+            <span><h3 th:text="|Creditos aprobados: ${creditos_aprobados}|"></h3></span>
+            <span><h3 th:text="|Creditos desaprobados: ${creditos_reprobados}|  "></h3></span>
+            <span><h3 th:text="|Creditos matriculados: ${creditos_matriculados}|"></h3></span>
+
+
             <div id="content">
             </div>
         </div>

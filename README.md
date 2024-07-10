@@ -26,12 +26,10 @@
 - Bug al buscar un cachimbo, funcion double en el calculo del promedio
 - Frontend mas estetico
     1. Primera pagina: nombre, cui, semestre, promedio general, cantidad de creditos aprobados y desaprobados, cantidad de creditos matriculados, se tiene que hacer una distincion entre alumno y egresado(hacerlo con suma de creditos totales??),
-    2. Cursos matriculados: semestre, creditos, docente opcional
-    3. Cursos llevados: Nombre, semestre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
+    2. Cursos llevados: Nombre, semestre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
+    3. Cursos matriculados: semestre, creditos, docente opcional
     4. Cursos aptos para llevar: nombre, semestre, creditos
 - \# de matricula **Random**
-- Promedio semestre anterior
-  - Se necesita año de matricula
 - Registro final de matriculas con servidor
 
 ## DB

@@ -20,7 +20,7 @@ public class HistorialController {
     }
 
     @GetMapping("/historial")
-    public List<AlumnoRepository.Curso> historial(@RequestParam(name = "cui") int cui, Model model) {
+    public List<AlumnoRepository.CursoNotas> historial(@RequestParam(name = "cui") int cui, Model model) {
         return repository.get_historial(cui);
     }
 }

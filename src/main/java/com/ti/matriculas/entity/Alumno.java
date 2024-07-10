@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/*
+ * TODO: Agregado de dni, vendría a ser contraseña
+ */
 @Entity
 @Table(name = "alumno")
 public class Alumno {

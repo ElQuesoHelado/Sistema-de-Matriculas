@@ -43,6 +43,21 @@ const _TABLE_MATRICULABLES_COLUMNSDEF = [
     targets: 1
   }
 ];
+const _TABLE_LLEVADOS_COLUMNS = [
+  {title: "Código", data: "codigo"},
+  {title: "Curso", data: "nombre"},
+  {title: "Semestre", data: "semestre"},
+  {title: "Créditos", data: "creditos"},
+  {title: "Notas", data: "nota"},
+  {title: "N° matrícula", data: "numero"},
+];
+const _TABLE_LLEVADOS_COLUMNSDEF = [
+  {
+    render: (data, row, type) => course_capitalize(data),
+    targets: 1
+  }
+];
+
 const _TABLE_LANGUAGE = {
   lengthMenu: "Mostrar _MENU_ registros por página",
   zeroRecords: "Ningún registro encontrado",
@@ -60,12 +75,14 @@ const _TABLE_LANGUAGE = {
 };
 
 const _TABLES_COLUMNS = {
+  1: [_TABLE_LLEVADOS_COLUMNS, _TABLE_LLEVADOS_COLUMNSDEF],
   2: [_TABLE_MATRICULADOS_COLUMNS, _TABLE_MATRICULADOS_COLUMNSDEF],
   3: [_TABLE_MATRICULABLES_COLUMNS, _TABLE_MATRICULABLES_COLUMNSDEF],
 };
 
 function loadAllTables() {
   const rest_tables = [
+    ["/historial", 1],
     ["/matriculados", 2],
     ["/matriculables", 3],
   ];

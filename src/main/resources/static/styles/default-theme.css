@@ -11,10 +11,6 @@
   --bg-login-button-background-light: #2c25f5;
 }
 
-.theme-dashboard {
-  --bg-dashboard-header: red;
-}
-
 .btn-login {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--bg-login-button-background);

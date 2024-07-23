@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 public class Alumno {
     @Id
     private int cui;
+    private int dni;
     private String pnombre;
     private String snombre;
     private String papellido;
@@ -19,10 +20,12 @@ public class Alumno {
     private String email1;
     private String email2;
 
-    protected Alumno(){}
+    protected Alumno() {
+    }
 
-    public Alumno(int cui, String pnombre, String snombre, String papellido, String sapellido, String email1, String email2) {
+    public Alumno(int cui, int dni, String pnombre, String snombre, String papellido, String sapellido, String email1, String email2) {
         this.cui = cui;
+        this.dni = dni;
         this.pnombre = pnombre;
         this.snombre = snombre;
         this.papellido = papellido;
@@ -35,6 +38,7 @@ public class Alumno {
     public String toString() {
         return "Alumno{" +
                 "cui=" + cui +
+                "dni=" + dni +
                 ", pnombre='" + pnombre + '\'' +
                 ", snombre='" + snombre + '\'' +
                 ", papellido='" + papellido + '\'' +
@@ -46,6 +50,10 @@ public class Alumno {
 
     public int getCui() {
         return cui;
+    }
+
+    public int getDni() {
+        return dni;
     }
 
     public String getPnombre() {

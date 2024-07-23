@@ -50,8 +50,9 @@ function change_menu(self, id) {
     console.error(`Request menu id ${id} don't exists`);
 }
 
-function logout() {
-  window.location.href = "/";
+function  logout() {
+  //Spring Security se encarga del logout en esa URI especificamente
+  window.location.href = "/logout";
 }
 
 $(save_profile);

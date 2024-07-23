@@ -3,10 +3,14 @@ package com.ti.matriculas.controllers;
 import com.ti.matriculas.entity.Alumno;
 import com.ti.matriculas.repository.AlumnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Controller
 public class DashboardController {
@@ -17,10 +21,23 @@ public class DashboardController {
         this.repository = repository;
     }
 
-    //TODO: Cambio a post??
     @GetMapping("/dashboard")
-    public String dashboard(@RequestParam(name = "cui") int cui, Model model) {
-        Alumno alumno = repository.findById(cui);
+//    public String dashboard(@RequestParam(name = "cui") int cui, Model model) {
+//    public String dashboard(@RequestBody AlumnoDet alumnoDet, Model model) {
+    public String dashboard(Model model) {
+        //Se obtienen datos del usuario autenticado
+        SecurityContext context = SecurityContextHolder.getContext();
+        Authentication authentication = context.getAuthentication();
+        String username = authentication.getName();
+//        Object principal = authentication.getPrincipal();
+
+//        System.out.println(username);
+//        System.out.println(principal);
+
+        //Excepciones?
+        int cui = Integer.parseInt(username);
+
+        Alumno alumno = repository.findByCui(cui);
         if (alumno == null)
             return String.format("redirect:/?error=No se encontro el CUI %d", cui);
         Float promedio = repository.get_promedio_general(cui);

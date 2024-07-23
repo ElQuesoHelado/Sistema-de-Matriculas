@@ -48,9 +48,10 @@ CREATE
 OR REPLACE FUNCTION get_cursos_reprobados (cui_ bigint) RETURNS TABLE (
   codigo bigint,
   semestre smallint,
-  creditos smallint
+  creditos smallint,
+  numero smallint
 ) AS $$ 
-    SELECT MA.codigo_curso, C.semestre, C.creditos
+    SELECT MA.codigo_curso, C.semestre, C.creditos, MA.numero
     FROM "matricula" MA, "curso" C
     WHERE cui_ = MA.cui AND Ma.codigo_curso = C.codigo
         AND ( MA.nota1 != -1 AND MA.nota2 != -1 AND MA.nota3 != -1 )

@@ -91,9 +91,9 @@ function loadAllTables() {
     {
       url: table[0],
       method: "get",
-      data: {
-        cui: _CUI
-      }
+      // data: {
+      //   cui: _CUI
+      // }
     }
   ).done(data => {
     const id = table[1];

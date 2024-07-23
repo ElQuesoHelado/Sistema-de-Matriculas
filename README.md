@@ -12,25 +12,38 @@
 - Notas, prerequisitos, semestres adecuados, no mucho adelantado, cupos, logins
 - BD con lo necesario de $todo$ el salon
 
-### (Ya no necesario??????)
-
-- Todos los calculos posibles de notas
-- Creditos, cupos, grupos(2 max), 40 personas
-  - Con meritocracia
-
 ## Falta
 
-- **Organizar todas las paginas**
+- **Distinguir alumno y egresado** pagina perfil
+  - Suma de creditos totales
+- Cursos llevados mostrar condicion: aprobado o desaprobado
 - *Matricular a alguien*
 - DNI como contraseña, login
 - Bug al buscar un cachimbo, funcion double en el calculo del promedio
-- Frontend mas estetico
-    1. Primera pagina: nombre, cui, semestre, promedio general, cantidad de creditos aprobados y desaprobados, cantidad de creditos matriculados, se tiene que hacer una distincion entre alumno y egresado(hacerlo con suma de creditos totales??),
-    2. Cursos llevados: Nombre, semestre, promedio(no notas individuales), condicion(aprobado, desaprobado), numero de matricula
-    3. Cursos matriculados: semestre, creditos, docente opcional
-    4. Cursos aptos para llevar: nombre, semestre, creditos
 - \# de matricula **Random**
 - Registro final de matriculas con servidor
+
+## Credenciales
+
+### Invictos
+
+| CUI      | DNI      |
+| -------- | -------- |
+| 20231538 | 36717055 |
+| 20230570 | 48071602 |
+| 20243471 | 17321899 |
+| 20232281 | 60780365 |
+
+### Jalados
+
+| CUI      | DNI      |
+| -------- | -------- |
+| 20233578 | 92325085 |
+| 20231540 | 91777636 |
+| 20233581 | 61747685 |
+| 20231535 | 24715374 |
+
+### Egresados
 
 ## DB
 

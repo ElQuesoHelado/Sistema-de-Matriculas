@@ -14,14 +14,14 @@
 
 ## Falta
 
+- *Matricular a alguien frontend*
+    - Se necesita agregar cursos matrículables a un array de JSON([2017208, 2017029]) y mandarlo al Endpoint matricular con POST
 - **Distinguir alumno y egresado** pagina perfil
+- Mostrar errores de login(mandados del server)
   - Suma de creditos totales
 - Cursos llevados mostrar condicion: aprobado o desaprobado
-- *Matricular a alguien*
-- DNI como contraseña, login
 - Bug al buscar un cachimbo, funcion double en el calculo del promedio
 - \# de matricula **Random**
-- Registro final de matriculas con servidor
 
 ## Credenciales
 

@@ -7,7 +7,7 @@
   - Codigo, un reporte, documentacion no tan especifica, ciertas partes del codigo
 
 ## Sistema completo
-
+  
 - Web o apk, login que deja ambos
 - Notas, prerequisitos, semestres adecuados, no mucho adelantado, cupos, logins
 - BD con lo necesario de $todo$ el salon
@@ -15,31 +15,41 @@
 ## Falta
 
 - *Matricular a alguien frontend*
-    - Se necesita agregar cursos matrículables a un array de JSON([2017208, 2017029]) y mandarlo al Endpoint matricular con POST
+  - Se necesita agregar cursos matrículables a un array de JSON([2017208, 2017029]) y mandarlo al Endpoint matricular con POST
 - Mostrar errores de login(mandados del server)
 
 ## Credenciales
-    * Tiene cursos matriculados       
+
+### Con matricula activa
+
+| CUI      | DNI      |
+|----------| -------- |
+| 20240845 | 56368838 |
+| 20233577 | 31149079 |
+| 20223084 | 81012668 |
+
 ### Invictos
 
-| CUI        | DNI      |
-|------------| -------- |
-| 20243472   | 79560429 |
-| * 20230579 | 14795948 |
+| CUI      | DNI      |
+|----------| -------- |
+| 20222589 | 82408520 |
+| 20240829 | 52675411 |
+| 20232282 | 49181467 |
 
 ### Jalados
 
-| CUI        | DNI      |
-|------------| -------- |
-| * 20233582 | 60780365 |
-| * 20233597 | 77257681 |
-| * 20233578 | 92325085 |
+| CUI      | DNI      |
+|----------| -------- |
+| 20232279 | 65368423 |
+| 20221737 | 14968888 |
+| 20213142 | 46323011 |
 
 ### Egresados
+
 | CUI      | DNI      |
 | -------- | -------- |
 | 20190751 | 28759034 |
-| 20192272 | 87815344 | 
+| 20192272 | 87815344 |
 
 ## BD
 

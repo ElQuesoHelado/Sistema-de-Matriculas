@@ -53,6 +53,9 @@
             <a data-bs-toggle="collapse" href="#cui" th:text="|&nbsp;'${pnombre} ${papellido}'|"></a>
             <div class="collapse collapse-horizontal" id="cui" th:text="|&nbsp;CUI:&nbsp;${cui}|"></div>
           </div>
+          <div class="d-flex justify-content-center">
+            <span th:text="${creditos_aprobados>=232} ? 'Egresado' : 'Estudiante'"></span>
+          </div>
         </h1>
         <div class="rounded border p-3 bg-white text-start">
           <span th:if="${semestre}" th:text="|Semestre actual: ${semestre}|"></span> <br>

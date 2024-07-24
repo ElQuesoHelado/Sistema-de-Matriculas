@@ -38,6 +38,13 @@ public class MatricularController {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
         int cui = Integer.parseInt(username);
+        //Si se esta matriculado en algun curso, no se puede
+        // matricular
+        if (!repository.get_cursos_matriculados(cui).isEmpty()) {
+            System.out.println("Alumno con matricula activa");
+            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+        }
+
 
         //Necesitamos revisar si los cursos listados en JSON son validos
         List<AlumnoRepository.Curso> listaCursosMatriculables = repository.get_cursos_matriculables(cui);

@@ -41,6 +41,9 @@ public class DashboardController {
         if (alumno == null)
             return String.format("redirect:/?error=No se encontro el CUI %d", cui);
         Float promedio = repository.get_promedio_general(cui);
+        if (promedio == null)
+            promedio = 0.0f;
+
         Integer semestre = repository.get_semestre(cui);
         Integer creditos_aprobados = repository.get_creditos_aprobados(cui);
         Integer creditos_reprobados = repository.get_creditos_reprobados(cui);

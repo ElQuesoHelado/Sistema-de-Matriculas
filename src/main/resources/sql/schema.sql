@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS "matricula" (
 	"nota1" real NOT NULL,
 	"nota2" real NOT NULL,
 	"nota3" real NOT NULL,
-	"numero" smallint NOT NULL
+	"numero" smallint NOT NULL DEFAULT 1
 );
 
 CREATE TABLE IF NOT EXISTS "docente" (

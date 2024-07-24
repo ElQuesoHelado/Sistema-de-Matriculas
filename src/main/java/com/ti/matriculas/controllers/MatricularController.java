@@ -4,6 +4,7 @@ package com.ti.matriculas.controllers;
 import com.ti.matriculas.repository.AlumnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -33,16 +34,15 @@ public class MatricularController {
         return "";
     }
 
-    @PostMapping("/matricular")
+    @PostMapping(value="/matricular", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> matricular(@RequestBody List<Integer> codigosCursosCandidatos, Model model) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-
+        
         int cui = Integer.parseInt(username);
         //Si se esta matriculado en algun curso, no se puede
         // matricular
         if (!repository.get_cursos_matriculados(cui).isEmpty()) {
-            System.out.println("Alumno con matricula activa");
-            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity<>("Alumno con matricula activa", HttpStatus.NOT_ACCEPTABLE);
         }
 
 
@@ -73,20 +73,17 @@ public class MatricularController {
         for (Integer codigoCursoCantidato : codigosCursosCandidatos) {
             if (!candidatosDuplicados.add(codigoCursoCantidato) ||
                     !codigoNumeroMatriculables.containsKey(codigoCursoCantidato)) {
-                System.out.println("Lista de cursos a matricular invalida");
-                return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+                return new ResponseEntity<>("Lista de cursos a matricular invalida", HttpStatus.NOT_ACCEPTABLE);
             }
             //Vamos sumando creditos para ver s i se exceden
             creditos += codigoNumeroMatriculables.get(codigoCursoCantidato);
             if (creditos > maxCreditos) {
-                System.out.println("Exceso de creditos a matricular");
-                return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+                return new ResponseEntity<>("Exceso de creditos a matricular", HttpStatus.NOT_ACCEPTABLE);
             }
         }
 
         if (creditos < minCreditos) {
-            System.out.println("No se cumple el minimo de creditos a matricular");
-            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity<>("No se cumple el minimo de creditos a matricular", HttpStatus.NOT_ACCEPTABLE);
         }
 
         //Matriculamos al alumno en los cursos solicitados, consideramos sus matriculas anteriores
